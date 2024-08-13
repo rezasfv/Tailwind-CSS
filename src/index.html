@@ -25,13 +25,28 @@
           ticketsMenuItem.classList.add("open");
           }
       })
+
+      const darkModeToggle=document.getElementById("dark-mode-toggle");
+      darkModeToggle.addEventListener("click",()=>{
+        if(document.body.classList.contains("dark")){
+          document.body.classList.remove("dark");
+        }else{
+          document.body.classList.add("dark");
+          }
+      })
     }
     </script>
   </head>
-  <body>
-    <main>
+  <body class="dark">
+    <main class="bg-zinc-200 dark:bg-zinc-900">
       <header class="text-zinc-200">
-        <nav class="sticky top-0 flex bg-gradient-to-r from-red-500 to-pink-500">
+
+        <div id="dark-mode-toggle" class="fixed top-24 right-0 inline-block w-12 cursor-pointer rounded-l-lg bg-zinc-900 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-900 p-2 text-3xl">
+          <i class="fa-solid fa-sun dark:hidden"></i>
+          <i class="fa-solid fa-moon hidden dark:inline"></i>
+        </div>
+
+        <nav class="z-10 sticky top-0 flex bg-gradient-to-r from-red-500 to-pink-500">
           <div class="flex items-center p-2 gap-2">
             <img src="./assets/images/logo-inverted.png" width="50">
             <div class="font-bold text-2xl">
@@ -124,6 +139,59 @@
         </form>
       </div>
       </header>
+
+      <div class="p-3 bg-zinc-200 dark:bg-zinc-900 max-w-screen-lg mx-auto mt-20 text-zinc-900 dark:text-zinc-200">
+        <h2>Headliners</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        
+        <div class="mt-4 flex w-full snap-x gap-4 overflow-x-auto pb-5">
+          <div class="min-w-[80%] md:min-w-[40%]">
+            <div style="background-image: url('./assets/images/band1.jpg');" class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"></div>
+            <h5 class="mt-2">Title</h5>
+            <h6>13/08/2024</h6>
+          </div>
+
+
+          <div class="min-w-[80%] md:min-w-[40%]">
+            <div style="background-image: url('./assets/images/band2.jpg');" class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"></div>
+            <h5 class="mt-2">Title</h5>
+            <h6>13/08/2024</h6>
+          </div>
+
+
+          <div class="min-w-[80%] md:min-w-[40%]">
+            <div style="background-image: url('./assets/images/band3.jpg');" class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"></div>
+            <h5 class="mt-2">Title</h5>
+            <h6>13/08/2024</h6>
+          </div>
+
+
+          <div class="min-w-[80%] md:min-w-[40%]">
+            <div style="background-image: url('./assets/images/band4.jpg');" class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"></div>
+            <h5 class="mt-2">Title</h5>
+            <h6>13/08/2024</h6>
+          </div>
+
+          <div class="min-w-[80%] md:min-w-[40%]">
+            <div style="background-image: url('./assets/images/band5.jpg');" class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"></div>
+            <h5 class="mt-2">Title</h5>
+            <h6>13/08/2024</h6>
+          </div>
+
+          <div class="min-w-[80%] md:min-w-[40%]">
+            <div style="background-image: url('./assets/images/band6.jpg');" class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"></div>
+            <h5 class="mt-2">Title</h5>
+            <h6>13/08/2024</h6>
+          </div>
+
+          <div class="min-w-[80%] md:min-w-[40%]">
+            <div style="background-image: url('./assets/images/band7.jpg');" class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"></div>
+            <h5 class="mt-2">Title</h5>
+            <h6>13/08/2024</h6>
+          </div>
+        </div>
+          
+      </div>
     </main>
   </body>
 </html>
